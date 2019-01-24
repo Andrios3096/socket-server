@@ -48,20 +48,24 @@ export default class Server {
     //11 metodos del socket
     private escucharSockets() {
 
+
+
         console.log('escuchando sockets');
 
         this.io.on('connection', cliente => {
 
+
             console.log('cliente conectado');
 
-            socket.mensaje(cliente,
-                this.io
-                )
+            // recibir un evneto sin rest
+            socket.mensaje(cliente, this.io)
 
             // sockets desconectar
             socket.desconectar(cliente);
 
         })
+
+
     }
 
     //3

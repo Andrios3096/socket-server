@@ -57,8 +57,6 @@ export default class HeroesControllers {
 
       let payload = await Mysql.ejecutarQuery(query2)
 
-
-
             res.json({
                 nombre,
                 poder
